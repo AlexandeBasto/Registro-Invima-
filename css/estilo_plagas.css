@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la tabla de encabezado */
+.header-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Espacio entre la tabla de encabezado y la tabla de datos */
+}
+
+.header-table th, .header-table td {
+    border: 2px solid #000; /* Bordes negros y gruesos para visibilidad */
+    padding: 8px;
+    text-align: center; /* Texto centrado */
+    background-color: #f2f2f2; /* Fondo gris claro para el encabezado */
+}
+
+/* Estilos para la tabla de datos */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Espacio superior para separación */
+}
+
+.data-table th, .data-table td {
+    border: 2px solid #000; /* Bordes negros y gruesos */
+    padding: 10px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #e0e0e0; /* Fondo gris claro para encabezados */
+    font-weight: bold;
+}
+
+.data-table td[contenteditable="true"] {
+    background-color: #fff; /* Fondo blanco para celdas editables */
+}
+
+/* Ajuste de ancho de columnas */
+.data-table th, .data-table td {
+    width: auto; /* Ajuste automático de ancho para celdas */
+}
+
+/* Nota de aclaración */
+.notes {
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Estilos para el menú desplegable dentro de la tabla */
+.data-table select {
+    text-align: center;
+    font-weight: bold;
+    width: 100%; /* El menú desplegable ocupa todo el ancho de la celda */
+    padding: 5px; /* Agrega un poco de espacio interior */
+    border: none; /* Sin borde para que se integre con el estilo de la tabla */
+    background-color: transparent; /* Fondo transparente para que combine con el fondo de la celda */
+}
+
+/* Estilos para los botones */
+.btn, .btn2 {
+  border: none; 
+  color: black; 
+  padding: 14px 28px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+}
+
+.success, .success2 {
+  background-color: white; 
+  border: 2px solid #04AA6D;
+} 
+
+.success:hover, .success2:hover {
+  background-color: #46a049; 
+  color: white;
+}
+
+/* Estilos para la alerta */
+.alerta {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8f9fa; /* Color de fondo más suave */
+    color: #333;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
+    z-index: 9999;
+    border-left: 6px solid #4CAF50; /* Borde de color (verde, por ejemplo) */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre icono y texto */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transición suave */
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px); /* Mueve la alerta hacia arriba al desaparecer */
+    pointer-events: none; /* Desactiva los eventos cuando está oculta */
+}
+
+.alerta-icono {
+    font-size: 24px;
+    color: #4CAF50; /* Color verde */
+}
+
+/* --- Estilos responsivos --- */
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header-table, .data-table {
+        font-size: 14px; /* Reduce el tamaño de la fuente para mejor visibilidad */
+    }
+    
+    .btn, .btn2 {
+        padding: 10px 20px; /* Reduce el padding para pantallas más pequeñas */
+    }
+    
+    .alerta {
+        font-size: 16px; /* Disminuye ligeramente el tamaño de texto de la alerta */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-table, .data-table {
+        font-size: 12px; /* Reducir más el tamaño de la fuente en móviles */
+    }
+    
+    .btn, .btn2 {
+        padding: 8px 16px; /* Aún más pequeño para dispositivos móviles */
+    }
+    
+    .alerta {
+        font-size: 14px; /* Ajuste del tamaño del texto de la alerta */
+        padding: 15px 30px; /* Reduce el padding */
+    }
+    
+    /* Ajuste de las tablas en pantallas pequeñas */
+    .data-table, .header-table {
+        display: block;
+        overflow-x: auto; /* Habilita el scroll horizontal en pantallas pequeñas */
+        white-space: nowrap; /* Evita que las tablas se rompan en líneas */
+    }
+}

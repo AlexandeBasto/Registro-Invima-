@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrera de Buses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .road {
+            position: relative;
+            width: 80%;
+            height: 50px;
+            background-color: #ddd;
+            margin: 20px auto;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .bus {
+            position: absolute;
+            top: 10px;
+            width: 50px;
+            height: 30px;
+            background-color: red;
+            border-radius: 5px;
+        }
+
+        .bus2 {
+            background-color: blue;
+        }
+
+        .bus3 {
+            background-color: green;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carrera de Buses</h1>
+
+    <div class="road" id="road1">
+        <div class="bus" id="bus1"></div>
+    </div>
+
+    <div class="road" id="road2">
+        <div class="bus bus2" id="bus2"></div>
+    </div>
+
+    <div class="road" id="road3">
+        <div class="bus bus3" id="bus3"></div>
+    </div>
+
+    <button onclick="iniciarCarrera()">¡Iniciar Carrera!</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        // Variables para controlar las posiciones de los buses
+        let bus1Position = 0;
+        let bus2Position = 0;
+        let bus3Position = 0;
+        let carreraActiva = false;
+
+        // Función para iniciar la carrera
+        function iniciarCarrera() {
+            if (carreraActiva) return; // Evitar que se inicie la carrera más de una vez
+            carreraActiva = true;
+
+            bus1Position = 0;
+            bus2Position = 0;
+            bus3Position = 0;
+
+            document.getElementById("resultado").textContent = ""; // Limpiar el resultado anterior
+
+            let interval = setInterval(function() {
+                // Mover cada bus una distancia aleatoria entre 1 y 5 píxeles
+                bus1Position += Math.floor(Math.random() * 5) + 1;
+                bus2Position += Math.floor(Math.random() * 5) + 1;
+                bus3Position += Math.floor(Math.random() * 5) + 1;
+
+                // Actualizar la posición de los buses
+                document.getElementById("bus1").style.left = bus1Position + 'px';
+                document.getElementById("bus2").style.left = bus2Position + 'px';
+                document.getElementById("bus3").style.left = bus3Position + 'px';
+
+                // Definir el ancho de la carretera como la meta
+                const roadWidth = document.getElementById("road1").offsetWidth - 50; // Restar el tamaño del bus
+
+                // Comprobar si algún bus ha llegado a la meta
+                if (bus1Position >= roadWidth || bus2Position >= roadWidth || bus3Position >= roadWidth) {
+                    clearInterval(interval); // Detener la carrera
+                    carreraActiva = false;
+
+                    // Determinar el ganador
+                    if (bus1Position >= roadWidth) {
+                        document.getElementById("resultado").textContent = "¡El Bus Rojo ha ganado!";
+                    } else if (bus2Position >= roadWidth) {
+                        document.getElementById("resultado").textContent = "¡El Bus Azul ha ganado!";
+                    } else if (bus3Position >= roadWidth) {
+                        document.getElementById("resultado").textContent = "¡El Bus Verde ha ganado!";
+                    }
+                }
+            }, 50); // Repetir la función cada 50 milisegundos
+        }
+    </script>
+</body>
+</html>

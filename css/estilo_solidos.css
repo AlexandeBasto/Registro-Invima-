@@ -1,0 +1,129 @@
+body{
+    font-family: Arial, sans-serif;
+
+}
+/* Estilo de la tabla principal */
+.header-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.header-table th, .header-table td {
+    border: 2px solid #000; /* Bordes negros y gruesos para visibilidad */
+    padding: 8px;
+    text-align: center;
+}
+
+.header-table .logo img {
+    display: block;
+    margin: auto;
+}
+
+.header-table .main-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.header-table .sub-title {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.header-table .info {
+    text-align: left;
+    font-size: 0.9em;
+}
+
+/* Estilo de la tabla de datos */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-table th, .data-table td {
+    border: 2px solid #000; /* Bordes negros y gruesos para visibilidad */
+    padding: 8px;
+    text-align: center;
+}
+
+/* Estilo de la tabla de observaciones finales */
+.footer-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.footer-table th, .footer-table td {
+    border: 2px solid #000; /* Bordes negros y gruesos para visibilidad */
+    padding: 8px;
+    text-align: center;
+}
+
+/* Estilo de notas */
+.notes {
+    font-size: 0.9em;
+    text-align: center;
+    font-weight: bold;
+}
+.btn {
+    border: none; 
+    color: black; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+  }
+  .success {background-color: white; border: 2px solid #04AA6D;} 
+  .success:hover {background-color: #46a049; color: white;}
+
+  /* Estilos para los botones */
+.btn, .btn2 {
+    border: none; 
+    color: black; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+  }
+  
+  .success, .success2 {
+    background-color: white; 
+    border: 2px solid #04AA6D;
+  } 
+  
+  .success:hover, .success2:hover {
+    background-color: #46a049; 
+    color: white;
+  }
+
+  /* Estilos para la alerta */
+.alerta {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8f9fa; /* Color de fondo más suave */
+    color: #333;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
+    z-index: 9999;
+    border-left: 6px solid #4CAF50; /* Borde de color (verde, por ejemplo) */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre icono y texto */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transición suave */
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px); /* Mueve la alerta hacia arriba al desaparecer */
+    pointer-events: none; /* Desactiva los eventos cuando está oculta */
+}
+
+.alerta-icono {
+    font-size: 24px;
+    color: #4CAF50; /* Color verde */
+}

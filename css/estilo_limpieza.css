@@ -1,0 +1,186 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-wrapper {
+    background-color: #0288d1; /* Color de fondo del navbar */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.brand-logo:hover {
+    color: #fff176; /* Cambio de color en hover */
+}
+
+/* Estilos para el menú de navegación */
+#nav-mobile {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+#nav-mobile li {
+    display: inline;
+}
+
+#nav-mobile li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#nav-mobile li a:hover {
+    background-color: #0277bd; /* Fondo cuando se hace hover */
+}
+
+/* Ocultar en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    #nav-mobile {
+        display: none; /* Ocultar en pantallas pequeñas */
+    }
+}
+
+/* Mostrar el menú en dispositivos medianos o grandes */
+.hide-on-med-and-down {
+    display: flex;
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .nav-wrapper {
+        flex-direction: column; /* Cambiar el layout a columna en pantallas pequeñas */
+    }
+
+    .brand-logo {
+        margin-bottom: 15px;
+    }
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+}
+
+.title h2, .title h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.info p {
+    margin: 0;
+    text-align: right;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table, th, td {
+    border: 2px solid #000; /* Bordes negros y gruesos para visibilidad */
+    text-align: center;
+    padding: 5px;
+}
+
+footer {
+    text-align: left;
+    padding: 10px;
+    border-top: 1px solid #000;
+}
+
+.hallazgos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hallazgos th, .hallazgos td {
+    border: 1px solid #000;
+    padding: 5px;
+}
+/* Ajustes generales del título principal */
+.main-title {
+    font-size: 24px; /* Tamaño de la fuente del título */
+    text-align: center;
+    padding: 10px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Fondo claro */
+    border: 1px solid #ccc; /* Borde ligero */
+}
+
+/* Ajustes para el select */
+#areaVerificar {
+    text-align: center;
+    width: 100%; /* Que ocupe todo el espacio disponible */
+    padding: 10px; /* Espaciado interno para hacerlo más grande */
+    font-size: 16px; /* Aumentar el tamaño del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    border: none;
+    background-color: transparent; /* Fondo blanco */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.btn {
+    border: none; 
+    color: black; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+  }
+  .success {background-color: white; border: 2px solid #04AA6D;} 
+  .success:hover {background-color: #46a049; color: white;}
+
+
+/* Estilos para la alerta */
+.alerta {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8f9fa; /* Color de fondo más suave */
+    color: #333;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
+    z-index: 9999;
+    border-left: 6px solid #4CAF50; /* Borde de color (verde, por ejemplo) */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre icono y texto */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transición suave */
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px); /* Mueve la alerta hacia arriba al desaparecer */
+    pointer-events: none; /* Desactiva los eventos cuando está oculta */
+}
+
+.alerta-icono {
+    font-size: 24px;
+    color: #4CAF50; /* Color verde */
+}

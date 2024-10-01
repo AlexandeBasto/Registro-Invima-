@@ -1,0 +1,69 @@
+body {
+  text-align: center;
+}
+.tabla-protocolo {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  .tabla-protocolo thead tr {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .tabla-protocolo th, .tabla-protocolo td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .tabla-protocolo tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tabla-protocolo tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .tabla-protocolo tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .tabla-protocolo tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .tabla-protocolo {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  .tabla-protocolo thead tr {
+    background-color: #009879;
+    color: white;
+  }
+  
+  .tabla-protocolo th, .tabla-protocolo td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .tabla-protocolo tbody tr {
+    background-color: #f3f3f3;
+  }
+  
+  .tabla-protocolo tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .proxima-fecha {
+    font-weight: bold;
+    font-size: 18px;
+  }

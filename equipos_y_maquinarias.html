@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida del Equipo</title>
+    <link rel="stylesheet" href="css/estilo_equipos.css">
+</head>
+<body>
+    <div id="alerta" class="alerta hidden">
+        <span class="alerta-icono">✔️</span>
+        Introducción a los Equipos y Maquinarias en INVERSIONES LA ESMERALDA 1966 SAS
+        <br>
+        <br>
+        La implementación de equipos y maquinarias en INVERSIONES LA ESMERALDA 1966 SAS es esencial para asegurar la eficiencia en la producción y garantizar la calidad de los productos. Estos equipos permiten optimizar los procesos de elaboración, horneado, y almacenamiento, además de cumplir con las normativas sanitarias y de seguridad industrial exigidas por la ley.
+        <br>
+        <br>
+        En Colombia, la regulación de los equipos y maquinarias utilizados en el sector alimentario, incluyendo las panaderías, está normada principalmente por el Decreto 3075 de 1997, que establece los requisitos sanitarios para la fabricación, procesamiento y distribución de alimentos. Según este decreto, los equipos deben ser diseñados y ubicados de manera que permitan su limpieza y desinfección, evitando la contaminación de los alimentos.
+        <br>
+        <br>
+        Asimismo, el Decreto 1072 de 2015, que compila las normativas sobre seguridad y salud en el trabajo, obliga a las panaderías a implementar medidas que garanticen la seguridad de los operarios al utilizar maquinaria. 
+        <br>
+        <br>
+        Esto incluye la inspección regular de los equipos, el mantenimiento preventivo, y la capacitación del personal en el uso adecuado de las maquinarias, con el fin de reducir riesgos laborales.
+        El cumplimiento de estas normativas no solo asegura un ambiente de trabajo seguro, sino que también garantiza la calidad y seguridad alimentaria en todos los productos elaborados en INVERSIONES LA ESMERALDA 1966 SAS.
+    </div>
+
+    <table class="header-table">
+        <tr>
+            <!-- Celda para el logo -->
+            <td rowspan="2" colspan="1" class="logo">
+                <img alt="Logo" height="70" src="img/logo pana.png" width="70"/>
+            </td>
+            <!-- Celda para el título principal -->
+            <th colspan="10" rowspan="2" class="main-title">HOJA DE VIDA</th>
+            <!-- Celda para información adicional -->
+            <td colspan="1" class="info">Código: ESM2-SGC-FOR-12</td>
+        </tr>
+        <tr>
+            <td colspan="1" class="info">
+                <div>Versión: 1-2024</div>
+                <div>Fecha: 06/06/2022</div>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- Información del equipo -->
+    <div class="data-table">
+        <table class="info-table" id="infoTable">
+            <tr>
+                <th>NOMBRE DEL EQUIPO</th>
+                <td colspan="4">
+                    <select id="areaVerificar" onchange="cambiarAspectos()">
+                        <option value="" disabled selected>SELECCIONE UN EQUIPO</option>
+                        <option value="MOLINO DE QUESO">MOLINO DE QUESO</option>
+                        <option value="BATIDORA DE 20LT">BATIDORA DE 20LT</option>
+                        <option value="AMASADORA">AMASADORA</option>
+                        <option value="DIVISORA DE MASA">DIVISORA DE MASA</option>
+                        <option value="MESON N°1">MESON N°1</option>
+                        <option value="MESON N°2">MESON N°2</option>
+                        <option value="MESON N°3">MESON N°3</option>
+                        <option value="MESON N°4">MESON N°4</option>
+                        <option value="MESON N°5">MESON N°5</option>
+                        <option value="MESON N°6">MESON N°6</option>
+                        <option value="LICUADORA INDUSTRIAL MINI N°1">LICUADORA INDUSTRIAL MINI N°1</option>
+                        <option value="MESON REFRIGERADOR N°1">MESON REFRIGERADOR N°1</option>
+                        <option value="MESON REFRIGERADOR N°2">MESON REFRIGERADOR N°2</option>
+                        <option value="LICUADORA 2LT">LICUADORA 2LT</option>
+                        <option value="CONGELADOR Y REFRIGERADOR">CONGELADOR Y REFRIGERADOR</option>
+                        <option value="LICUADORA INDUSTRIAL 10LT">LICUADORA INDUSTRIAL 10LT</option>
+                        <option value="REFRIGERADOR 200LT">REFRIGERADOR 200LT</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <tr>
+                    <th>UBICACIÓN DEL EQUIPO:</th>
+                    <td id="ubicacionEquipo" contenteditable="true"></td>
+                </tr>
+                <tr>
+                    <th>MARCA:</th>
+                    <td id="marcaEquipo" contenteditable="true"></td>
+                </tr>
+                <tr>
+                    <th>MODELO:</th>
+                    <td id="modeloEquipo" contenteditable="true"></td>
+                </tr>
+                <tr>
+                    <th>SERIE:</th>
+                    <td id="serieEquipo" contenteditable="true" colspan="3"></td>
+                </tr>
+                <tr>
+                    <th>DESCRIPCION:</th>
+                    <td id="descripcionEquipo" contenteditable="true" colspan="3"></td>
+                </tr>
+        </table>
+    </div>
+
+    <!-- Tabla de mantenimiento -->
+    <table class="maintenance-table" id="maintenanceTable">
+        <thead>
+            <tr>
+                <th>FECHA</th>
+                <th>TIPO DE MANTENIMIENTO <br> PREVENTIVO-CORRECTIVO</th>
+                <th>DESCRIPCIÓN DEL MANTENIMIENTO</th>
+                <th>RESPONSABLE EXTERNO</th>
+                <th>VERIFICACIÓN INTERNA</th>
+                <th>OBSERVACIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Varias filas en blanco para llenado de datos -->
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button onclick="downloadExcel()" class="btn success">
+        <img src="img/excel.png" alt="Icono" style="width: 20px; height: 20px; vertical-align: middle;">
+        Descargar Excel</button>
+        
+    <!-- Script de SheetJS para generar Excel -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script>
+// Datos de equipos
+const equiposData = {
+    "MOLINO DE QUESO": { ubicacion: "Zona A", marca: "Marca X", modelo: "MQ-123", serie: "12345", descripcion: "molino para moler bein molido el queso" },
+    "BATIDORA DE 20LT": { ubicacion: "Zona B", marca: "Marca Y", modelo: "B-20", serie: "67890",  descripcion: " para moler bein molido el queso" },
+    "AMASADORA": { ubicacion: "Zona C", marca: "Marca Z", modelo: "A-100", serie: "11223" },
+    // Agrega más equipos aquí
+};
+
+// Función que se ejecuta al cambiar el equipo seleccionado
+function cambiarAspectos() {
+    const equipoSeleccionado = document.getElementById('areaVerificar').value;
+    const ubicacionInput = document.getElementById('ubicacionEquipo');
+    const marcaInput = document.getElementById('marcaEquipo');
+    const modeloInput = document.getElementById('modeloEquipo');
+    const serieInput = document.getElementById('serieEquipo');
+    const descripcionInput = document.getElementById('descripcionEquipo');
+    
+    if (equiposData[equipoSeleccionado]) {
+        ubicacionInput.textContent = equiposData[equipoSeleccionado].ubicacion;
+        marcaInput.textContent = equiposData[equipoSeleccionado].marca;
+        modeloInput.textContent = equiposData[equipoSeleccionado].modelo;
+        serieInput.textContent = equiposData[equipoSeleccionado].serie;
+        descripcionInput.textContent = equiposData[equipoSeleccionado].descripcion;
+    } else {
+        // Si no se encuentra el equipo seleccionado, limpiar los campos
+        ubicacionInput.textContent = "";
+        marcaInput.textContent = "";
+        modeloInput.textContent = "";
+        serieInput.textContent = "";
+        descripcionInput.textContent = "";
+    }
+}
+        function downloadExcel() {
+            // Crear un nuevo libro de Excel
+            var wb = XLSX.utils.book_new();
+
+            // Obtener la tabla de información y de mantenimiento
+            var infoTable = document.getElementById('infoTable');
+            var maintenanceTable = document.getElementById('maintenanceTable');
+
+            // Convertir las tablas a datos JSON para organizar en una sola hoja
+            var ws_data = [];
+
+            // Añadir las filas de la tabla de información al array
+            for (let row of infoTable.rows) {
+                let rowData = [];
+                for (let cell of row.cells) {
+                    rowData.push(cell.innerText);
+                }
+                ws_data.push(rowData);
+            }
+
+            // Añadir una fila vacía entre las tablas
+            ws_data.push([]);
+
+            // Añadir las filas de la tabla de mantenimiento al array
+            for (let row of maintenanceTable.rows) {
+                let rowData = [];
+                for (let cell of row.cells) {
+                    rowData.push(cell.innerText);
+                }
+                ws_data.push(rowData);
+            }
+
+            // Crear la hoja de Excel con todos los datos
+            var ws = XLSX.utils.aoa_to_sheet(ws_data);
+
+            // Añadir la hoja al libro
+            XLSX.utils.book_append_sheet(wb, ws, 'Hoja de Vida del Equipo');
+
+            // Descargar el archivo Excel
+            XLSX.writeFile(wb, 'Hoja_de_Vida_Equipo.xlsx');
+        }
+
+
+        document.getElementById("btnEnviarReporte").addEventListener("click", function() {
+    // Obtener los campos "infoArea" y "h1"
+    let infoArea = document.getElementById("infoArea1").textContent.trim();
+    let hallazgo1 = document.getElementById("h1").textContent.trim();
+    let hallazgo2 = document.getElementById("h2").textContent.trim(); // Si tienes más hallazgos
+
+    // Verificar si los campos tienen información
+    if (!infoArea && !hallazgo1 && !hallazgo2) {
+        // Si no hay datos en los campos, mostrar alerta
+        alert("No se encontraron aspectos ni hallazgos para enviar.");
+        return; // Detener la ejecución si no hay datos
+    }
+
+    // Construir el mensaje a enviar
+    let mensaje = "*Área a verificar:*\n";
+    
+    // Verificar si hay información en el campo "infoArea"
+    if (infoArea) {
+        mensaje += `*Aspecto a verificar:* ${infoArea}\n`;
+    }
+
+    // Agregar los hallazgos al mensaje, si existen
+    if (hallazgo1) {
+        mensaje += `1. *Hallazgo:* ${hallazgo1}\n`;
+    }
+    if (hallazgo2) {
+        mensaje += `2. *Hallazgo:* ${hallazgo2}\n`;
+    }
+
+    // Codificar el mensaje para la URL de WhatsApp
+    let url = `https://api.whatsapp.com/send?phone=573125352884&text=${encodeURIComponent(mensaje)}`;
+
+    // Abrir la URL de WhatsApp en una nueva pestaña
+    window.open(url, '_blank');
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.info-table, .maintenance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 2px solid #000; /* Bordes negros y gruesos para visibilidad */
+}
+
+.info-table th, .info-table td, .maintenance-table th, .maintenance-table td {
+  border: 2px solid #000; /* Bordes negros y gruesos para visibilidad */
+  padding: 5px;
+    text-align: left;
+}
+
+.info-table th {
+    width: 25%;
+}
+
+/* Estilos para el menú desplegable dentro de la tabla */
+.data-table select {
+  width: 100%; /* El menú desplegable ocupa todo el ancho de la celda */
+  padding: 5px; /* Agrega un poco de espacio interior */
+  border: none; /* Sin borde para que se integre con el estilo de la tabla */
+  background-color: transparent; /* Fondo transparente para que combine con el fondo de la celda */
+}
+
+.maintenance-table th {
+    text-align: center;
+}
+
+.info-section {
+    margin-bottom: 20px;
+}
+.btn {
+    border: none; 
+    color: black; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+  }
+  .success {background-color: white; border: 2px solid #04AA6D;} 
+  .success:hover {background-color: #46a049; color: white;}
+
+  .header-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black
+  }
+  
+  .header-table th, .header-table td {
+    padding: 10px;
+    text-align: left;
+    border: 2px solid #000; /* Bordes negros y gruesos para visibilidad */
+  }
+  
+  .logo {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+  }
+  
+  .main-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .sub-title {
+    font-size: 18px;
+    color: black;
+  }
+  
+  .info {
+    font-size: 14px;
+    color: black;
+  }
+
+/* Estilos para la alerta */
+.alerta {
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f8f9fa; /* Color de fondo más suave */
+  color: #333;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
+  z-index: 9999;
+  border-left: 6px solid #4CAF50; /* Borde de color (verde, por ejemplo) */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre icono y texto */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transición suave */
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-20px); /* Mueve la alerta hacia arriba al desaparecer */
+  pointer-events: none; /* Desactiva los eventos cuando está oculta */
+}
+.hidden {
+  display: none;
+}
+
+.alerta-icono {
+  font-size: 24px;
+  color: #4CAF50; /* Color verde */
+}
